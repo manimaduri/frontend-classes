@@ -1,0 +1,60 @@
+<!-- fluid  design -->
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .fluid-box{
+            width : 80%;
+            max-width: 400px;
+            background-color: lightblue;
+            padding: 20px;
+            margin: auto;
+        }
+        /* for fluid design we use %, vw/vh , em/rem */
+        .name-container{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h1{
+            font-size: clamp(1.25rem, 5vw, 3rem);
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .col{
+            width: 16.6%; 
+            background-color: lightblue;
+            padding: 1rem;
+        }
+        </style>
+        </head>
+        <body>
+            <!-- <div class="fluid-box">
+                <h1>This box is fluid</h1>
+                <p class="name-container"><span>Name:</span> <span>John doe</span></p>
+            </div> -->
+
+            <div class="row">
+                <div class="col">Column 1</div>
+                <div class="col">Column 2</div>
+                <div class="col">Column 3</div>
+                <div class="col">Column 4</div>
+                <div class="col">Column 5</div>
+                <div class="col">Column 6</div>
+            </div>
+        </body>
+        </html>

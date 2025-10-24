@@ -1,0 +1,184 @@
+/* Responsive Utilities */
+.d-none { display: none !important; }
+.d-block { display: block !important; }
+.d-flex { display: flex !important; }
+
+/* Mobile First Media Queries */
+@media (min-width: 576px) {
+    .d-sm-none { display: none !important; }
+    .d-sm-block { display: block !important; }
+    .d-sm-flex { display: flex !important; }
+}
+
+@media (min-width: 768px) {
+     .nav-menu {
+        flex-direction: row;
+        gap: 2rem;
+    }
+     .nav {
+        flex-direction: row;
+    }
+
+    .d-md-none { display: none !important; }
+    .d-md-block { display: block !important; }
+    .d-md-flex { display: flex !important; }
+    
+    .col-md-1 { width: 8.333%; }
+    .col-md-2 { width: 16.666%; }
+    .col-md-3 { width: 25%; }
+    .col-md-4 { width: 33.333%; }
+    .col-md-5 { width: 41.666%; }
+    .col-md-6 { width: 50%; }
+    .col-md-7 { width: 58.333%; }
+    .col-md-8 { width: 66.666%; }
+    .col-md-9 { width: 75%; }
+    .col-md-10 { width: 83.333%; }
+    .col-md-11 { width: 91.666%; }
+    .col-md-12 { width: 100%; }
+}
+
+@media (min-width: 1024px) {
+    .d-lg-none { display: none !important; }
+    .d-lg-block { display: block !important; }
+    .d-lg-flex { display: flex !important; }
+    
+    .col-lg-1 { width: 8.333%; }
+    .col-lg-2 { width: 16.666%; }
+    .col-lg-3 { width: 25%; }
+    .col-lg-4 { width: 33.333%; }
+    .col-lg-5 { width: 41.666%; }
+    .col-lg-6 { width: 50%; }
+    .col-lg-7 { width: 58.333%; }
+    .col-lg-8 { width: 66.666%; }
+    .col-lg-9 { width: 75%; }
+    .col-lg-10 { width: 83.333%; }
+    .col-lg-11 { width: 91.666%; }
+    .col-lg-12 { width: 100%; }
+}
+
+@media (min-width: 1200px) {
+    .d-xl-none { display: none !important; }
+    .d-xl-block { display: block !important; }
+    .d-xl-flex { display: flex !important; }
+}
+
+/* Tablet Adjustments */
+@media (min-width: 768px) and (max-width: 1023.98px) {
+    .nav-menu {
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .stats-grid {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .stat {
+        flex: 1 1 45%;
+    }
+}
+
+/* Large Screen Adjustments */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.4rem;
+    }
+    
+    .page-header h1 {
+        font-size: 3rem;
+    }
+    
+    .course-card {
+        margin-bottom: 2rem;
+    }
+    
+    .member-card {
+        padding: 2.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .footer,
+    .btn,
+    .social-login,
+    .filter-tabs {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: black;
+        background: white;
+    }
+    
+    .page-header {
+        background: none !important;
+        color: black !important;
+    }
+    
+    .course-card,
+    .member-card,
+    .contact-card {
+        border: 1px solid #ccc;
+        break-inside: avoid;
+        margin-bottom: 1rem;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .btn-primary {
+        background: #000 !important;
+        border: 2px solid #000 !important;
+        color: #fff !important;
+    }
+    
+    .nav-link:hover {
+        background: #000 !important;
+        color: #fff !important;
+    }
+    
+    .course-card {
+        border: 2px solid #000 !important;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus Management for Accessibility */
+.btn:focus,
+.form-control:focus,
+.nav-link:focus {
+    outline: 3px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* Dark Mode Support (if needed later) */
+@media (prefers-color-scheme: dark) {
+    /* Could add dark mode styles here if required */
+}

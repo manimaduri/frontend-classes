@@ -1,0 +1,88 @@
+<!-- fluid  design  and responsive layout -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+         *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .row{
+            display: flex;
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            gap:1rem;
+            width: 100%;
+        }
+
+        .col{
+            width: 16.6%; 
+            background-color: lightblue;
+            padding: 1rem;
+        }
+
+        .col-3{
+            width: 25%;
+            background-color: lightblue;
+        }
+
+        .col-6{
+            width: 50%;
+            background-color: blueviolet;
+        }
+
+         .d-sm{
+                display: none;
+            }
+
+        @media(max-width : 768px){
+            .row{
+                flex-direction: column;
+            }
+            .col-3, .col-6{
+                width: 100%;
+            }
+
+            .d-sm{
+                display: block;
+            }
+
+            .d-md{
+                display: none;
+            }
+        }
+        @media screen {
+            
+        }
+        @media all {
+            
+        }
+        @media print {
+            .container{
+                background-color: white;
+            }
+        }
+        </style>
+        </head>
+        <body>
+            <!-- if you want 6 parts you need to do 100/6 = 16.6% -->
+             <!-- if you want 6 parts of screen 12/6 = 2, 2x8.3 = 16.6%  -->
+
+            <!-- if you want 4 parts you need to do 100/4 = 25% -->
+             <!-- if you want 6 parts of screen 12/3 = 4,  -->
+<!-- 12 columns in one screen so 12=100% , 4 columns of 12 -> 12/4 = 3, -->
+            <div class="row">
+                <div class="col-3 d-sm">100%</div> 
+                <div class="col-6 d-sm">100%</div>
+                <div class="col-3 d-sm">100%</div>
+                <!-- ------------------------------------- -->
+                <div class="col-3 d-md">25%</div> 
+                <div class="col-6 d-md">50%</div>
+                <div class="col-3 d-md">25%</div>
+            </div>
+        </body>
+        </html>

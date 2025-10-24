@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessible Semantic HTML Page</title>
+</head>
+<body>
+
+  <!-- 🔹 Page Header -->
+  <header role="banner">
+    <h1>Tech Blog Weekly</h1>
+    <p>Your source for modern web dev tips</p>
+  </header>
+
+  <!-- 🔹 Navigation Bar -->
+  <nav role="navigation" aria-label="Main Navigation">
+    <ul>
+      <li><a href="#home" aria-current="page">Home</a></li>
+      <li><a href="#articles">Articles</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🔹 Main Content Area -->
+  <main role="main" id="home">
+    <!-- 🔸 Featured Section -->
+    <section aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Featured Article</h2>
+      <article>
+        <header>
+          <h3>The Future of JavaScript</h3>
+          <p><time datetime="2025-05-20">May 20, 2025</time> by <strong>Alex Dev</strong></p>
+        </header>
+        <p>
+          JavaScript continues to evolve with frameworks like Next.js and new features like records & tuples.
+          Learn how to stay ahead as a frontend developer.
+        </p>
+        <footer>
+          <a href="#">Read More</a>
+        </footer>
+      </article>
+    </section>
+
+    <!-- 🔸 Secondary Articles -->
+    <section aria-labelledby="more-articles">
+      <h2 id="more-articles">More Reads</h2>
+
+      <article>
+        <h3>Understanding the Virtual DOM</h3>
+        <p>React's diffing algorithm makes rendering efficient. Let’s break it down.</p>
+        <a href="#">Continue Reading</a>
+      </article>
+
+      <article>
+        <h3>Semantic HTML: More Than Just Tags</h3>
+        <p>Learn how your markup can help accessibility tools and screen readers.</p>
+        <a href="#">Continue Reading</a>
+      </article>
+    </section>
+
+    <!-- 🔸 Sidebar or Complementary Info -->
+    <aside role="complementary" aria-label="Newsletter Signup">
+      <h2>Subscribe</h2>
+      <form aria-labelledby="subscribe-form">
+        <fieldset>
+          <legend id="subscribe-form">Join our newsletter</legend>
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required aria-required="true" />
+          <button type="submit">Subscribe</button>
+        </fieldset>
+      </form>
+    </aside>
+  </main>
+
+  <!-- 🔹 Footer -->
+  <footer role="contentinfo">
+    <p>&copy; 2025 Tech Blog Weekly. All rights reserved.</p>
+    <nav aria-label="Footer Navigation">
+      <ul>
+        <li><a href="#privacy">Privacy Policy</a></li>
+        <li><a href="#terms">Terms of Use</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>

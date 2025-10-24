@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: wheat;
+  margin: 0;
+  padding: 2rem;
+}
+
+.profile-card {
+  width: 300px;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.profile-card img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.profile-card h2 {
+  margin: 0.5rem 0 0.2rem;
+  color: #333;
+}
+
+.profile-card p {
+  margin: 0;
+  color: #777;
+  font-size: 0.9rem;
+}

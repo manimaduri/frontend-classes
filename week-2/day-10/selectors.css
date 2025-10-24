@@ -1,0 +1,82 @@
+/* univeral selector  */
+
+*{
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* attribute selector with data- */
+/* [data-theme="dark"]{
+  background-color: black;
+  color: white;
+} */
+/* class selector */
+.info-card{
+  width: 400px;
+  background-color: aliceblue;
+  border: 1px solid black;
+  padding: 16px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* element selector */
+h1{
+  color: darkblue;
+  text-align: center;
+}
+
+/* id selector */
+#name{
+  color : darkgreen;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+/* class selector */
+.role{
+  font-style: italic;
+  color: gray;
+}
+
+/* grouping selector */
+h2, p{
+  margin : 10px 0;
+}
+
+/* attribute selector */
+a[href^="mailto"]{
+  color : #0066cc;
+  text-decoration: none;
+}
+
+.contact-btn{
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color:white;
+  border: none;
+  cursor: pointer;
+}
+
+/* class + class combo */
+.contact-btn.disabled{
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+/* attribute selector with data- */
+[data-status="disabled"]{
+  color:red;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.alternate{
+  background-color: azure;
+  text-align: end;
+}
+
+/* id selector */
+#name{
+  color : yellow;
+  font-size: 1.5rem;
+}

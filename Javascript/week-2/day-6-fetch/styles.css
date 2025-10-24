@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f9fc;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.user-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.user-card {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}

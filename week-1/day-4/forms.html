@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <h1>Create Your Account</h1>
+
+    <form action="#" method="POST">
+      <label for="username">Username:</label><br />
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="johndoe123"
+        required
+      /><br /><br />
+
+      <label for="bio">Bio:</label><br />
+      <textarea
+        id="bio"
+        name="bio"
+        rows="4"
+        cols="50"
+        placeholder="Tell us about yourself..."
+        required
+      ></textarea
+      ><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="you@example.com"
+        required
+      /><br /><br />
+
+      <label for="password">Password:</label><br />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+      /><br /><br />
+
+      <label for="age">Your Age:</label><br />
+      <input type="number" id="age" name="age" min="13" max="100" /><br /><br />
+
+      <label for="dob">Date of Birth:</label><br />
+      <input type="date" id="dob" name="dob" /><br /><br />
+
+      <label for="accountType">Account Type:</label><br />
+      <input
+        type="radio"
+        id="personal"
+        name="accountType"
+        value="personal"
+        checked
+      />
+      <label for="personal">Personal</label><br />
+      <input type="radio" id="business" name="accountType" value="business" />
+      <label for="business">Business</label><br /><br />
+
+      <label for="country">Country:</label><br />
+      <select id="country" name="country">
+        <option value="us">United States</option>
+        <option value="ca">Canada</option>
+        <option value="uk">United Kingdom</option>
+        <option value="au">Australia</option>
+        <option value="other">Other</option></select
+      ><br /><br />
+
+      <label>
+        <input type="checkbox" name="terms" required />
+        I agree to the Terms and Conditions </label
+      ><br /><br />
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </body>
+</html>

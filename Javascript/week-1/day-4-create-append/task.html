@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mini Note-Taking App</title>
+    <style>
+        body{
+            font-family: Arial;
+            margin: 20px;
+        }
+        input , button{
+            padding: 8px; 
+            margin: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li{
+            background-color: #f4f4f4;
+            margin:  6px 0;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .deleteBtn {
+            background-color: red;
+            color : white;
+            border : none;
+            cursor: pointer;
+            padding: 5px 8px;
+        }
+    </style>
+<!-- create a mini notetaking app -->
+  </head>
+  <body>
+    <input type="text" id="itemInput" placeholder="Enter items.."/>
+    <button id="addItem">Add Item</button>
+
+    <ul id="itemList"></ul>
+
+    <script>
+        const input = document.getElementById("itemInput")
+        const button = document.getElementById("addItem")
+        const list = document.getElementById("itemList")
+
+        button.addEventListener("click",()=>{
+            if(input.value.trim()!==""){
+                const li= document.createElement("li");
+                li.textContent =input.value;
+
+                //create a deletebtn
+                const deleteBtn = document.createElement("button");
+                deleteBtn.textContent = "Delete";
+                deleteBtn.classList.add("deleteBtn");
+
+                deleteBtn.addEventListener("click", ()=>{
+                    li.remove();
+                    
+                })
+
+                li.append(deleteBtn);
+                list.append(li);
+                input.value="";
+            }
+        })
+    </script>
+  </body>
+  </html>

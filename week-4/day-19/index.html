@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+      }
+      /* syntax 
+      @media(condition){
+        styles here
+        body{
+            margin 10px
+            font-
+        }
+      }
+      */
+
+      @media(min-width : 768px) and ( max-width : 1024px){
+        body{
+            background-color: red;
+        }
+      }
+
+      /* COMMON BREAKPOINTS */
+      /* Device Type       Width
+         Extra Small       <480px
+         Small(mobiles)     480px - 767px
+         Medium(tablets)    768px - 1023px
+         Large (laptops)    1024px - 1279px
+         XL(desktops)       >=1280px
+      */
+/* --------------------------------------------------------------- */
+
+      /* mobile default */
+      .container{
+        flex-direction: column;
+      }
+
+      /* mobile default */
+      .card-container{
+        display: grid;
+        gap : 20px;
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+
+      .card{
+        background-color: aliceblue;
+        padding: 30px;
+        border-radius: 8px;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      /* bigger screens - tablets */
+      @media(min-width : 767px){
+        .container{
+            flex-direction: row;
+        }
+
+        .card-container{
+            grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+    /* larger screens like laptops and desktops */
+      @media(min-width : 1024px){
+        .card-container{
+            grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      </style>
+  </head>
+  <body>
+    <div class="card-container">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 4</div>
+    </div>
+  </body>
+</html>

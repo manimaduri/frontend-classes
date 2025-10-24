@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Storage</title>
+  </head>
+  <body>
+
+    <button id="saveArr">Save fruits</button>
+    <button id="getArr">Get fruits</button>
+    <br />
+    <br />
+    <br />
+    <!-- ----------------------------------------- -->
+
+    <p>Count: <span id="count">0</span></p>
+    <button id="increment">Increment</button>
+    <button id="decrement">Decrement</button>
+    <button id="reset">Reset</button>
+
+    <!-- ----------------------------------------- -->
+    <br />
+    <br />
+    <br />
+    <button id="saveBtn">Save Data</button>
+    <button id="getBtn">Get Data</button>
+    <button id="removeBtn">Remove Data</button>
+
+    <script>
+        const fruits = ["Apple", "Banana", "Cherry"];
+
+        document.getElementById("saveArr").addEventListener("click",()=>{
+            localStorage.setItem("fruits",JSON.stringify(fruits));
+            alert("Fruits saved!!")
+        })
+        document.getElementById("getArr").addEventListener("click",()=>{
+            const storedFruits = JSON.parse(localStorage.getItem("fruits"));
+            console.log("typeof storedFruits should be array but:",typeof(storedFruits));
+            console.log("storedFuits", storedFruits.length)
+        })
+      // ---------------------------------------
+      const countEl = document.getElementById("count");
+      let count = localStorage.getItem("counter")
+        ? parseInt(localStorage.getItem("counter"))
+        : 0;
+      countEl.textContent = count;
+
+      document.getElementById("increment").addEventListener("click", () => {
+        count++;
+        console.log("count", count);
+        countEl.textContent = count;
+        localStorage.setItem("counter", count);
+      });
+
+      document.getElementById("decrement").addEventListener("click", () => {
+        count -= 1;
+        console.log("count", count);
+        countEl.textContent = count;
+        localStorage.setItem("counter", count);
+      });
+
+      document.getElementById("reset").addEventListener("click", () => {
+        count = 0;
+        countEl.textContent = count;
+        localStorage.removeItem("counter");
+      });
+
+      // ----------------------------------
+      //Save
+      document.getElementById("saveBtn").addEventListener("click", () => {
+        localStorage.setItem("username", "Alice");
+        alert("Username saved!");
+      });
+
+      //Get
+      document.getElementById("getBtn").addEventListener("click", () => {
+        const username = localStorage.getItem("username");
+        console.log("username", username);
+        alert("Stored username is: " + username);
+      });
+
+      //Remove
+      document.getElementById("removeBtn").addEventListener("click", () => {
+        localStorage.removeItem("username");
+        alert("Username removed!");
+      });
+    </script>
+  </body>
+</html>

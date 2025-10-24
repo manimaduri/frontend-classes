@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Courses - TechLearn Academy</title>
+    <meta name="description" content="Explore our comprehensive courses in programming, web development, and technology">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>TechLearn Academy</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="courses.html" class="nav-link active">Courses</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Courses</h1>
+                <p>Choose from our wide range of technology courses designed for all skill levels</p>
+            </div>
+        </section>
+
+        <section class="course-filters">
+            <div class="container">
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All Courses</button>
+                    <button class="filter-btn" data-filter="beginner">Beginner</button>
+                    <button class="filter-btn" data-filter="intermediate">Intermediate</button>
+                    <button class="filter-btn" data-filter="advanced">Advanced</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="courses-grid">
+            <div class="container">
+                <div class="row">
+                    <div class="course-card col col-12 col-md-6 col-lg-4" data-level="beginner">
+                        <div class="course-image">
+                            <img src="https://placehold.co/300x200?text=HTML+CSS" alt="Web Development Fundamentals">
+                            <div class="course-badge beginner">Beginner</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Web Development Fundamentals</h3>
+                            <p>Master HTML5, CSS3, and responsive design. Build beautiful, modern websites from scratch.</p>
+                            <div class="course-details">
+                                <span class="duration"><i class="far fa-clock"></i> 8 weeks</span>
+                                <span class="students"><i class="fas fa-users"></i> 2,450 students</span>
+                            </div>
+                            <div class="course-footer">
+                                <span class="price">₹4,999</span>
+                                <a href="#" class="btn btn-secondary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card col col-12 col-md-6 col-lg-4" data-level="intermediate">
+                        <div class="course-image">
+                            <img src="https://placehold.co/300x200?text=JavaScript" alt="JavaScript Mastery">
+                            <div class="course-badge intermediate">Intermediate</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>JavaScript Mastery</h3>
+                            <p>Learn modern JavaScript, DOM manipulation, ES6+ features, and asynchronous programming.</p>
+                            <div class="course-details">
+                                <span class="duration"><i class="far fa-clock"></i> 10 weeks</span>
+                                <span class="students"><i class="fas fa-users"></i> 1,890 students</span>
+                            </div>
+                            <div class="course-footer">
+                                <span class="price">₹6,999</span>
+                                <a href="#" class="btn btn-secondary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card col col-12 col-md-6 col-lg-4" data-level="beginner">
+                        <div class="course-image">
+                            <img src="https://placehold.co/300x200?text=Python" alt="Python Programming">
+                            <div class="course-badge beginner">Beginner</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Python Programming</h3>
+                            <p>Start your programming journey with Python. Learn syntax, data structures, and problem solving.</p>
+                            <div class="course-details">
+                                <span class="duration"><i class="far fa-clock"></i> 12 weeks</span>
+                                <span class="students"><i class="fas fa-users"></i> 3,200 students</span>
+                            </div>
+                            <div class="course-footer">
+                                <span class="price">₹5,999</span>
+                                <a href="#" class="btn btn-secondary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card col col-12 col-md-6 col-lg-4" data-level="advanced">
+                        <div class="course-image">
+                            <img src="https://placehold.co/300x200?text=React" alt="React Development">
+                            <div class="course-badge advanced">Advanced</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>React Development</h3>
+                            <p>Build modern, interactive web applications using React, hooks, and state management.</p>
+                            <div class="course-details">
+                                <span class="duration"><i class="far fa-clock"></i> 14 weeks</span>
+                                <span class="students"><i class="fas fa-users"></i> 1,560 students</span>
+                            </div>
+                            <div class="course-footer">
+                                <span class="price">₹8,999</span>
+                                <a href="#" class="btn btn-secondary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card col col-12 col-md-6 col-lg-4" data-level="intermediate">
+                        <div class="course-image">
+                            <img src="https://placehold.co/300x200?text=Node.js" alt="Backend Development">
+                            <div class="course-badge intermediate">Intermediate</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Backend Development with Node.js</h3>
+                            <p>Learn server-side programming, APIs, databases, and full-stack development.</p>
+                            <div class="course-details">
+                                <span class="duration"><i class="far fa-clock"></i> 16 weeks</span>
+                                <span class="students"><i class="fas fa-users"></i> 980 students</span>
+                            </div>
+                            <div class="course-footer">
+                                <span class="price">₹9,999</span>
+                                <a href="#" class="btn btn-secondary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card col col-12 col-md-6 col-lg-4" data-level="beginner">
+                        <div class="course-image">
+                            <img src="https://placehold.co/300x200?text=Data+Science" alt="Data Science Basics">
+                            <div class="course-badge beginner">Beginner</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Data Science Fundamentals</h3>
+                            <p>Introduction to data analysis, visualization, and basic machine learning concepts.</p>
+                            <div class="course-details">
+                                <span class="duration"><i class="far fa-clock"></i> 10 weeks</span>
+                                <span class="students"><i class="fas fa-users"></i> 2,100 students</span>
+                            </div>
+                            <div class="course-footer">
+                                <span class="price">₹7,499</span>
+                                <a href="#" class="btn btn-secondary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-comparison">
+            <div class="container">
+                <h2>Course Comparison</h2>
+                <div class="table-container">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Course</th>
+                                <th>Duration</th>
+                                <th>Level</th>
+                                <th>Price</th>
+                                <th>Certificate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Web Development Fundamentals</td>
+                                <td>8 weeks</td>
+                                <td><span class="badge beginner">Beginner</span></td>
+                                <td>₹4,999</td>
+                                <td><i class="fas fa-check-circle" style="color: #28a745;"></i> Yes</td>
+                            </tr>
+                            <tr>
+                                <td>JavaScript Mastery</td>
+                                <td>10 weeks</td>
+                                <td><span class="badge intermediate">Intermediate</span></td>
+                                <td>₹6,999</td>
+                                <td><i class="fas fa-check-circle" style="color: #28a745;"></i> Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Python Programming</td>
+                                <td>12 weeks</td>
+                                <td><span class="badge beginner">Beginner</span></td>
+                                <td>₹5,999</td>
+                                <td><i class="fas fa-check-circle" style="color: #28a745;"></i> Yes</td>
+                            </tr>
+                            <tr>
+                                <td>React Development</td>
+                                <td>14 weeks</td>
+                                <td><span class="badge advanced">Advanced</span></td>
+                                <td>₹8,999</td>
+                                <td><i class="fas fa-check-circle" style="color: #28a745;"></i> Yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechLearn Academy</h3>
+                    <p>Empowering the next generation of tech professionals</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@techlearn.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechLearn Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

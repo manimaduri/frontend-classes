@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TechLearn Academy</title>
+    <meta name="description" content="Get in touch with TechLearn Academy. Contact us for course inquiries, support, or partnerships">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>TechLearn Academy</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="courses.html" class="nav-link">Courses</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="login.html" class="nav-link btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Have questions? We'd love to hear from you. Get in touch with our team.</p>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-method col col-12 col-md-4">
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <h3>Email Us</h3>
+                            <p>info@techlearn.com</p>
+                            <p>support@techlearn.com</p>
+                            <small>Response within 24 hours</small>
+                        </div>
+                    </div>
+                    <div class="contact-method col col-12 col-md-4">
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <h3>Call Us</h3>
+                            <p>+91 98765 43210</p>
+                            <p>+91 98765 43211</p>
+                            <small>Mon-Fri 9AM-6PM IST</small>
+                        </div>
+                    </div>
+                    <div class="contact-method col col-12 col-md-4">
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <h3>Visit Us</h3>
+                            <p>123 Tech Park</p>
+                            <p>Bangalore, Karnataka 560001</p>
+                            <small>Office hours: 9AM-6PM</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="row">
+                    <div class="form-column col col-12 col-lg-8">
+                        <div class="form-container">
+                            <h2>Send us a Message</h2>
+                            <form class="contact-form" action="#" method="post">
+                                <div class="row">
+                                    <div class="form-group col col-12 col-md-6">
+                                        <label for="firstName">First Name *</label>
+                                        <input type="text" id="firstName" name="firstName" class="form-control" required>
+                                    </div>
+                                    <div class="form-group col col-12 col-md-6">
+                                        <label for="lastName">Last Name *</label>
+                                        <input type="text" id="lastName" name="lastName" class="form-control" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="form-group col col-12 col-md-6">
+                                        <label for="email">Email Address *</label>
+                                        <input type="email" id="email" name="email" class="form-control" required>
+                                    </div>
+                                    <div class="form-group col col-12 col-md-6">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" name="phone" class="form-control">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject">Subject *</label>
+                                    <select id="subject" name="subject" class="form-control" required>
+                                        <option value="">Select a subject</option>
+                                        <option value="course-inquiry">Course Inquiry</option>
+                                        <option value="technical-support">Technical Support</option>
+                                        <option value="partnership">Partnership</option>
+                                        <option value="feedback">Feedback</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Message *</label>
+                                    <textarea id="message" name="message" class="form-control" rows="6" required 
+                                              placeholder="Tell us how we can help you..."></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="newsletter" name="newsletter">
+                                        <label for="newsletter">Subscribe to our newsletter for course updates and tech tips</label>
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="info-column col col-12 col-lg-4">
+                        <div class="contact-info-sidebar">
+                            <h3>Get Quick Help</h3>
+                            <div class="help-item">
+                                <h4><i class="fas fa-book"></i> Course Questions?</h4>
+                                <p>Check our <a href="#" class="help-link">FAQ section</a> or email us directly at courses@techlearn.com</p>
+                            </div>
+                            <div class="help-item">
+                                <h4><i class="fas fa-tools"></i> Technical Issues?</h4>
+                                <p>Visit our <a href="#" class="help-link">Help Center</a> or contact support@techlearn.com</p>
+                            </div>
+                            <div class="help-item">
+                                <h4><i class="fas fa-briefcase"></i> Business Partnerships?</h4>
+                                <p>Interested in corporate training? Email partnerships@techlearn.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-connect">
+                            <h3>Follow Us</h3>
+                            <div class="social-links">
+                                <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"></i> Facebook</a>
+                                <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                                <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i> YouTube</a>
+                                <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <h2>Find Our Office</h2>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <p><i class="fas fa-map-marked-alt"></i> Interactive Map</p>
+                        <p>123 Tech Park, Bangalore, Karnataka 560001</p>
+                        <small>Note: This is a placeholder for an actual map integration</small>
+                    </div>
+                </div>
+                
+                <div class="office-details">
+                    <div class="row">
+                        <div class="detail col col-12 col-md-4">
+                            <h4><i class="far fa-clock"></i> Office Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p>Saturday: 10:00 AM - 4:00 PM</p>
+                            <p>Sunday: Closed</p>
+                        </div>
+                        <div class="detail col col-12 col-md-4">
+                            <h4><i class="fas fa-car"></i> Parking</h4>
+                            <p>Free parking available</p>
+                            <p>Visitor spaces in front</p>
+                            <p>Wheelchair accessible</p>
+                        </div>
+                        <div class="detail col col-12 col-md-4">
+                            <h4><i class="fas fa-bus"></i> Public Transport</h4>
+                            <p>Metro: MG Road Station (2 km)</p>
+                            <p>Bus: Multiple routes available</p>
+                            <p>Auto/Taxi: Easily accessible</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechLearn Academy</h3>
+                    <p>Empowering the next generation of tech professionals</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@techlearn.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechLearn Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

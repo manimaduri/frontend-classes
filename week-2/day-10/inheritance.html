@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Inheritance</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: orange;
+        line-height: 1.6;
+        padding: 2rem;
+      }
+      .card {
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 0 auto;
+        border: 1px solid red;
+      }
+
+      h2 {
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      span.worktype {
+        font-style: italic;
+      }
+
+      /* 🔎 Visual for inherited vs not */
+      .info-section {
+        margin-top: 2rem;
+        padding: 1rem;
+        border: 1px dashed gray;
+        color : blue
+      }
+
+      .info-section h3 {
+        color: seagreen;
+        font-size: 1.2rem;
+      }
+
+
+      .info-section .forced {
+        font-family: inherit;
+        color: inherit;
+      }
+
+      .noinherit{
+        font-family: 'Courier New', Courier, monospace;
+        color:black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card">
+      <h2>Some NAme</h2>
+      <p>Fronted Developer <span class="worktype noinherit">Remote</span></p>
+      <p>This paragraph has custom styles -not inherited</p>
+    </div>
+
+    <div class="info-section">
+      <h3>Did you know?</h3>
+      <p>
+        Fonts and colors are inherited by default from parent elements like
+        <code>&lt;body&gt;</code>.
+      </p>
+      <p class="forced">This line is manually forced to inherit from parent.</p>
+    </div>
+  </body>
+</html>

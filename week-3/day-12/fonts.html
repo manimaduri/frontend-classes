@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Typography Styling</title>
+    <style>
+      :root {
+        font-size: 16px;
+      }
+      body {
+        font-family: "Georgia", serif;
+        background-color: #f9f9f9;
+        color: #222;
+        margin: 0;
+        padding: 2rem;
+        line-height: 1.6;
+      }
+
+      .blog-preview {
+        max-width: 700px;
+        margin: auto;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .blog-title {
+        font-family: "Helvetica Neue", sans-serif;
+        font-size: 2.2rem;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .blog-meta {
+        text-align: end;
+        font-style: italic;
+        font-size: 0.9rem;
+        color: #555;
+      }
+
+      .blog-content {
+        font-size: 1.05rem;
+        font-family: "Georgia", serif;
+        font-weight: 400;
+        line-height: 1.8;
+        text-align: justify;
+      }
+
+      .quote {
+        margin: 2rem 0;
+        padding-left: 1rem;
+        border-left: 4px solid #ccc;
+        font-style: italic;
+        font-size: 1.1rem;
+      }
+
+      .quote span {
+        font-weight: 600;
+      }
+
+      .note {
+        background-color: #fffbdd;
+        padding: 1rem;
+        margin-top: 2rem;
+        border-left: 5px solid #f7c948;
+        font-size: 1rem;
+      }
+
+      /* font-family, font-weight, font-style, text-align */
+    </style>
+  </head>
+  <body>
+    <section class="blog-preview">
+      <h1 class="blog-title">How Typography Impacts Readability</h1>
+      <div class="blog-meta">By Alex Writer - July 2025</div>
+      <div class="blog-content">
+        <p>
+          Typography is not just about choosing pretty fonts. It's about
+          ensuring readability, setting tone, and helping your content flow.
+          Great font choices and spacing make websites feel elegant and
+          accessible.
+        </p>
+
+        <p class="quote">
+          “Typography is the craft of endowing human language with a durable
+          visual form.” – <span>Robert Bringhurst</span>
+        </p>
+
+        <p>
+          Always combine `font-size`, `font-family`, and `line-height` wisely.
+          Large text with tight line spacing can be uncomfortable. Use
+          `text-align` like `justify` for articles and `center` for headings or
+          quotes.
+        </p>
+
+        <div class="note">
+          ✅ Tip: Avoid using more than 2–3 font families on a page. Use
+          contrast (like serif + sans-serif) instead of clutter.
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

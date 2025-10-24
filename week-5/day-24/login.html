@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TechLearn Academy</title>
+    <meta name="description" content="Sign in to your TechLearn Academy account to access your courses and learning dashboard">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>TechLearn Academy</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="courses.html" class="nav-link">Courses</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link btn-login active">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="login-page">
+        <div class="container">
+            <div class="login-container">
+                <div class="row">
+                    <div class="login-form-section col col-12 col-lg-6">
+                        <div class="form-container">
+                            <div class="login-header">
+                                <h2>Welcome Back!</h2>
+                                <p>Sign in to continue your learning journey</p>
+                            </div>
+                            
+                            <form class="login-form" action="#" method="post">
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" class="form-control" required 
+                                           placeholder="Enter your email">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" name="password" class="form-control" required 
+                                           placeholder="Enter your password">
+                                </div>
+                                
+                                <div class="form-options">
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="remember" name="remember">
+                                        <label for="remember">Remember me</label>
+                                    </div>
+                                    <a href="#" class="forgot-password">Forgot password?</a>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+                            </form>
+                            
+                            <div class="divider">
+                                <span>Or sign in with</span>
+                            </div>
+                            
+                            <div class="social-login">
+                                <button class="btn btn-social btn-google">
+                                    <span class="social-icon"><i class="fab fa-google"></i></span>
+                                    Continue with Google
+                                </button>
+                                <button class="btn btn-social btn-facebook">
+                                    <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
+                                    Continue with Facebook
+                                </button>
+                            </div>
+                            
+                            <div class="signup-prompt">
+                                <p>Don't have an account? <a href="#" class="signup-link">Sign up here</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="login-info-section col col-12 col-lg-6">
+                        <div class="info-content">
+                            <h3>Join Our Learning Community</h3>
+                            <div class="benefit-list">
+                                <div class="benefit-item">
+                                    <span class="benefit-icon"><i class="fas fa-chart-line"></i></span>
+                                    <div class="benefit-text">
+                                        <h4>Track Your Progress</h4>
+                                        <p>Monitor your learning journey with detailed analytics and achievements</p>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <span class="benefit-icon"><i class="fas fa-briefcase"></i></span>
+                                    <div class="benefit-text">
+                                        <h4>Access Course Materials</h4>
+                                        <p>Download resources, assignments, and certificates anytime</p>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <span class="benefit-icon"><i class="fas fa-users"></i></span>
+                                    <div class="benefit-text">
+                                        <h4>Connect with Peers</h4>
+                                        <p>Join study groups and discussion forums with fellow learners</p>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <span class="benefit-icon"><i class="fas fa-bullseye"></i></span>
+                                    <div class="benefit-text">
+                                        <h4>Personalized Learning</h4>
+                                        <p>Get course recommendations based on your interests and goals</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="student-stats">
+                                <h4>Join 50,000+ Students</h4>
+                                <div class="stats-grid">
+                                    <div class="stat">
+                                        <span class="stat-number">4.8/5</span>
+                                        <span class="stat-label">Average Rating</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-number">95%</span>
+                                        <span class="stat-label">Completion Rate</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-number">24/7</span>
+                                        <span class="stat-label">Support Available</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechLearn Academy</h3>
+                    <p>Empowering the next generation of tech professionals</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@techlearn.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechLearn Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

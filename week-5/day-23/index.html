@@ -1,0 +1,46 @@
+<!-- tailwind -->
+ <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Tailwind CSS </title>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <!-- mt-1  1rem = 16px-->
+    <!-- <h1 class="text-3xl font-bold underline pt-[9px] my-1">
+      Hello world!
+    </h1> -->
+    <header class="bg-blue-600 text-white p-6 text-center shadow-2xl fixed w-full animate-bounce ">
+        <h1 class="text-xl md:text-3xl font-bold">My Learning - Tailwind Responsiveness</h1>
+        <p class="text-base md:text-lg mt-2">Learning utilities</p>
+    </header>
+
+    <section class="max-w-6xl mx-auto p-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 pt-[200px]">
+    <div class="bg-white rounded-xl shadow-lg p-4 transform transition hover:scale-105 hover:shadow-2xl" >
+        <img src="https://placehold.co/150x150?text=Fast+Delivery" alt="Card" class="rounded-lg mb-4"/>
+        <h2 class="text-xl font-semibold mb-2">Responsive Design</h2>
+        <p class="text-gray-600 text-sm">This Card adjusts its size based on screen width using tailwind grid</p>
+    </div>
+    <div class="bg-white rounded-xl shadow-lg p-4 transform transition hover:-translate-y-2 hover:bg-blue-50" >
+        <img src="https://placehold.co/150x150?text=Fast+Delivery" alt="Card" class="rounded-lg mb-4"/>
+        <h2 class="text-xl font-semibold mb-2">Hover  Effects</h2>
+        <p class="text-gray-600 text-sm">Tailwind makes hover effects easy</p>
+    </div>
+    <div class="bg-white rounded-xl shadow-lg p-4 transform transition hover:scale-110 animate-spin" >
+        <img src="https://placehold.co/150x150?text=Fast+Delivery" alt="Card" class="rounded-lg mb-4"/>
+        <h2 class="text-xl font-semibold mb-2">Custom Animation</h2>
+        <p class="text-gray-600 text-sm">Tailwind makes hover effects easy</p>
+    </div>
+    <div class="bg-white rounded-xl shadow-lg p-4 transform transition hover:-translate-y-2 hover:rotate-2" >
+        <img src="https://placehold.co/150x150?text=Fast+Delivery" alt="Card" class="rounded-lg mb-4"/>
+        <h2 class="text-xl font-semibold mb-2">Hover  Effects</h2>
+        <p class="text-gray-600 text-sm">Tailwind makes hover effects easy</p>
+    </div>
+  
+    </section>
+
+    <footer class="bg-gray-800 text-white text-center p-4 mt-6">2025 Footer made using tailwind</footer>
+  </body>
+</html>

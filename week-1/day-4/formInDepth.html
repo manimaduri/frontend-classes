@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accessible Registration Form</title>
+</head>
+<body>
+  <h1 id="mainTitle">Event Login</h1>
+
+  <form  aria-labelledby="mainTitle">
+    <!-- Personal Details -->
+    <fieldset>
+      <legend>👤 Personal Info</legend>
+
+      <label for="fullName">Full Name:</label><br />
+      <input 
+        type="text" 
+        id="fullName" 
+        name="fullName" 
+        placeholder="Full Name" 
+        required 
+        aria-required="true"
+      /><br /><br />
+
+      <label for="email">Email Address:</label><br />
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="you@example.com" 
+        required 
+        aria-required="true"
+      /><br /><br />
+
+      <label for="bio">Tell us about yourself:</label><br />
+      <textarea 
+        id="bio" 
+        name="bio" 
+        rows="4" 
+        cols="50" 
+        maxlength="300"
+        placeholder="Short bio..." 
+        aria-describedby="bioHelp"
+      ></textarea>
+      <small id="bioHelp">Max 300 characters. This helps us tailor the experience.</small>
+    </fieldset>
+
+    <!-- Preferences -->
+    <fieldset>
+      <legend>⚙️ Preferences</legend>
+
+      <p>Contact Method:</p>
+      <input 
+        type="radio" 
+        id="contactEmail" 
+        name="contactMethod" 
+        value="email" 
+      />
+      <label for="contactEmail">Email</label><br />
+
+      <input 
+        type="radio" 
+        id="contactPhone" 
+        name="contactMethod" 
+        value="phone" 
+      />
+      <label for="contactPhone">Phone</label><br /><br />
+
+      <label for="country">Select Country:</label><br />
+      <select id="country" name="country" aria-label="Country selection">
+        <option value="" disabled>-- Choose --</option>
+        <option value="us">USA</option>
+        <option value="in">India</option>
+        <option value="uk">UK</option>
+        <option value="au">Australia</option>
+      </select>
+    </fieldset>
+
+    <!-- Legal -->
+    <fieldset>
+      <legend>📄 Agreement</legend>
+      <label>
+        <input 
+          type="checkbox" 
+          name="terms" 
+          required 
+          aria-required="true" 
+          aria-describedby="termsNote"
+        />
+        I accept the terms and conditions
+      </label>
+      <div id="termsNote">Required to continue registration.</div>
+    </fieldset>
+
+    <br />
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

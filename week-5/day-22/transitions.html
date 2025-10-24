@@ -1,0 +1,93 @@
+<!-- animations using css and properties like transition, transform and @keyframes -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      .flex{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      .box{
+        background-color: blue;
+        padding: 30px;
+        transition: background 0.4s ease; 
+        /* transition : [property] [duration] [timing-function] [delay] */
+      }
+
+      .box:hover{
+        background-color: red;
+      }
+
+      .box2{
+        background-color: blue;
+        padding: 30px;
+      }
+
+      .box2:hover{
+        background-color: red;
+      }
+
+      .button{
+        background-color: #222;
+        color: white;
+        padding: 10px 20px;
+        transition: background 0.8 ease, color 1s ease;
+      }
+      .button:hover{
+        background-color: #f1c40f;
+        color: black;
+      }
+
+      .grow-box{
+        width: 100px;
+        height: 100px;
+        background-color: tomato;
+        transition: width 0.5s, height 0.5s;
+      }
+      .grow-box:hover{
+        width: 200px;
+        height: 200px;
+      }
+
+      .fade-box{
+        width: 100px;
+        height: 100px;
+        opacity: 1;
+        border-radius: 0;
+        transition: opacity 0.5s ease-in-out, border-radius 0.5s;
+        background-color: green;
+      }
+
+      .fade-box:hover{
+        opacity: 0.5;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- transition -->
+     <div class="flex">
+    <div class="box">Some content with transition</div>
+   
+    <div class="box2">Some content without transition</div>
+
+    <button class="button">
+        Some button
+    </button>
+
+    <div class="grow-box">This will grow on hovering</div>
+    <div class="fade-box"></div>
+    </div>
+    
+  </body>
+</html>

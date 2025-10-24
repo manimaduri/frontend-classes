@@ -1,0 +1,85 @@
+<!-- application of grid system -->
+
+
+<!-- 
+goal : 
+on mobiles <576px - items to take full width  .col-12   (12/1 = 12)
+on tablets >=768px - 2 items per row          .col-md-6    (12/2 = 6)
+on laptop >=1024px - 3 items per row          .col-lg-4    (12/3 = 4)
+-->
+
+<!-- 
+calculation as  :
+100% = 12 equal parts
+
+col-x (x is 1 to 12)
+(x/12) * 100 is the widt
+
+Ex : col-6 -> (6/12)*100% = 50%
+-->
+
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .row{
+            width: 100%;
+            font-size: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col{
+            /* display: inline-block; */
+            background-color: #f0f0f0;
+            /* padding: 20px; */
+            /* border: 1px solid #ccc; */
+            margin: 0;
+            font-size: 1rem;
+
+        }
+
+        /* mobile first */
+        .col-12{
+            flex: 0 0 100%;
+            width: 100%;
+        }
+
+        @media(min-width : 768px){
+            .col-md-6{
+                flex : 0 0 50%;
+                width : 50%;
+            }
+        }
+        @media(min-width : 1024px){
+            .col-lg-4 {
+                flex : 0 0 33.33%;
+                width : 33.33%;
+            }
+        }
+        </style>
+        </head>
+        <body>
+            <div class="row">
+                <div class="col col-12 col-md-6 col-lg-4">Item 1</div>
+                <div class="col col-12 col-md-6 col-lg-4">Item 2</div>
+                <div class="col col-12 col-md-6 col-lg-4">Item 3</div>
+                <div class="col col-12 col-md-6 col-lg-4">Item 4</div>
+                <div class="col col-12 col-md-6 col-lg-4">Item 5</div>
+                <div class="col col-12 col-md-6 col-lg-4">Item 6</div>
+                <div class="col col-12 col-md-6 col-lg-4">Item 7</div>
+                <div class="col col-12 col-md-6 col-lg-4">Item 8</div>
+                <div class="col col-12 col-md-6 col-lg-4">Item 9</div>
+                <div class="col col-12 col-md-6 col-lg-4">Item 10</div>
+            </div>
+        </body>
+</html>

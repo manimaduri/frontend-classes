@@ -1,0 +1,99 @@
+<!-- animations using css and properties like transition, transform and @keyframes -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        background: #111;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .hero {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .content {
+        max-width: 400px;
+      }
+
+      .title {
+        font-size: 2rem;
+        animation: pulse 2s infinite;
+      }
+
+      .subtitle {
+        margin-bottom: 20px;
+        color: #ccc;
+      }
+
+      .cta {
+        padding: 10px 20px;
+        background-color: #f39c12;
+        border: none;
+        font-size: 1rem;
+        color: black;
+        transition: transform 0.3s ease, background-color 0.3s;
+      }
+      /* call to action */
+
+      .cta:hover {
+        transform: scale(1.1);
+        background-color: #e67e22;
+      }
+      .slide-in {
+        animation: slideIn 1s ease-out forwards;
+      }
+      .image {
+        width: 150px;
+        height: 150px;
+        background: url("https://placehold.co/150x150?text=Fast+Delivery")
+          no-repeat center;
+        border-radius: 50%;
+      }
+      @keyframes slideIn {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes pulse {
+        0% {
+          color: white;
+        }
+        50% {
+          color: #f1c40f;
+        }
+        100% {
+          color: white;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- example -->
+    <div class="hero">
+      <div class="content">
+        <h1 class="title">Explore the future</h1>
+        <p class="subtitle">Smooth transitions, Stuning animations.</p>
+        <button class="cta">Get Started</button>
+      </div>
+    </div>
+    <div class="image slide-in"></div>
+  </body>
+</html>

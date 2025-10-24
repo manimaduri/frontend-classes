@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Specificity & Cascade</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        padding: 2rem;
+      }
+
+      h1{
+        color : red;
+      }
+
+      .highlight{
+        color : orange;
+      }
+
+      section article h1{
+        color:purple;
+      }
+
+      
+
+      h1[role="heading"]{
+        color : green !important;
+      }
+
+      h1.highlight:hover{
+        color : blue;
+      }
+
+      #main-title{
+        color : darkblue;
+      }
+
+      #main-title:hover{
+        color:yellow;
+      }
+
+      h1{
+        color : yellow !important;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <article>
+        <h1 id="main-title" class="highlight" role="heading">
+          Welcome to Specificity!
+        </h1>
+      </article>
+    </section>
+  </body>
+</html>

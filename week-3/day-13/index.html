@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Box Model Demo</title>
+ <style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: #f0f4f8;
+        margin:2rem;
+    }
+
+    .container{
+        background: #fff;
+        padding : 20px;
+        max-width: 800px;
+        margin: auto;
+        border: 1px solid #ccc;
+    }
+
+    .box{
+        background-color: #dff9fb;
+        padding: 20px;
+        border: 5px solid #22a6b3;
+        margin-bottom: 2rem ; /* top right bottom left clockwise direction */ /* top-bottom left-right */ 
+    }
+
+    .box span{
+        background-color: #7ed6df;
+        padding: 10px;
+        display: inline-block;
+        border: 4px dotted yellow;
+    }
+
+    .box-content-only{
+        background-color: #f9ca24;
+        margin: 20px 0;
+    }
+
+    .box-with-margin{
+        background-color: #e17055;
+        padding: 30px;
+        margin: 40px;
+        border:3px dashed #d63031
+    }
+
+    .border-box-example{
+        background-color: #fab1a0;
+        width: 300px;
+        padding: 20px;
+        border : 10px solid #c0392b;
+    }
+
+    .content-box-example{
+        background-color: #ffeaa7;
+        width: 300px;
+        padding : 20px;
+        border : 10px solid #6c5ce7;
+        box-sizing: content-box;
+    }
+ </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>CSS Box Model Demo</h1>
+
+    <div class="box">
+      <h2>Box 1 – Basic Example</h2>
+      <p>This box has <strong>padding</strong> and <strong>border</strong>.</p>
+      <span>Inner Span</span>
+    </div>
+
+    <div class="box-content-only">
+      <h2>Box 2 – Content Only</h2>
+      <p>No padding, no border. Just raw content inside the box.</p>
+    </div>
+
+    <div class="box-with-margin">
+      <h2>Box 3 – Margin Example</h2>
+      <p>This box uses <strong>margin</strong> to push itself away from others.</p>
+    </div>
+
+    <h2>Box-Sizing Comparison</h2>
+    <div class="border-box-example">
+      <p><strong>Box-Sizing: border-box</strong> – Total width includes padding + border</p>
+    </div>
+
+    <div class="content-box-example">
+      <p><strong>Box-Sizing: content-box</strong> – Width applies only to content</p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>z-index and stacking</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        /* transform: ; */
+        /* filter */
+        /* will-change: ; */
+        /* mix-blend-mode: ; */
+      }
+
+      .box1{
+        background-color: red;
+        top : 50px;
+        left : 50px;
+        z-index: 999999;
+      }
+      .box2{
+        background-color: blue;
+        top : 100px;
+        left : 100px;
+        z-index: 9999;
+      }
+
+      /* stacking context */
+
+      .outer{
+        position: relative;
+        z-index: 10;
+        background-color: lightgray;
+        padding: 10px;
+      }
+      .middle{
+        /* position: relative; */
+        z-index: 2;
+        background: gray;
+        padding: 20px;
+        opacity: 0.9;
+        overflow: hidden;
+      }
+      .inner{
+        position: absolute;
+        z-index: -1;
+        background-color: black;
+        color: white;
+        top : 0px;
+        left: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="box box1">Box 1 <div class="box box2">Box 2</div></div> -->
+    
+
+    <div class="outer">Outer
+        <div class="middle">Middle
+            <div class="inner">Inner</div>
+        </div>
+    </div>
+  </body>
+</html>

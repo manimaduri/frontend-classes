@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Manipulation</title>
+  
+</head>
+<body>
+ <!-- 1.getElementById() -->
+
+ <!-- <h1 id="main-heading">Hello World!</h1>
+
+ <script>
+    const heading = document.getElementById("main-heading");
+    console.log(heading.textContent)
+ </script> -->
+
+ <!-- 2.getelementsByClassName() -->
+
+ <!-- <p class="info">First Paragraph</p>
+ <p class="info">Second Paragraph</p>
+
+ <script>
+    const paras = document.getElementsByClassName("info");
+    console.log(paras)
+    console.log("length",paras.length) //2
+    console.log("textContent---",paras[0].textContent) // First Paragraph
+ </script> -->
+
+ <!-- 3.querySelector() -->
+  <!-- selects the first match of a css selector -->
+ <!-- <h2 class="title">Another title</h2>
+  <h2 class="title">Welcome</h2>
+
+  <script>
+    const firstTitle = document.querySelector(".title");
+    console.log(firstTitle.textContent)
+  </script> -->
+
+ <!-- 4.querySelectorAll() -->
+  <!-- selects  all matches of a css selector -->
+
+  <h1 id="title">Old Title</h1>
+<p class="item">Apple</p>
+<p class="item">Banana</p>
+<p class="item2">Mango</p>
+
+<div id="box"></div>
+
+<p id="para">I am normal text</p>
+
+
+<script>
+    // 2.Changing content byusing .textContent
+    const title = document.getElementById("title");
+    title.textContent = "New Title!"; //Safest way, this doesnt need parse HTML
+
+    // 3.Adding content/Elements byusing .innerHTML , this allows adding new HTML tags dynamically
+    const box = document.getElementById("box");
+    box.innerHTML = "<strong>This is a bold text </strong>";
+
+    //4. Modify the styles 
+    const para = document.getElementById("para")
+    para.style.color="red";
+    para.style.fontSize="20px";
+    para.style.backgroundColor = "yellow";
+
+
+
+    //1. Get elements
+    const items = document.querySelectorAll(".item");
+    items.forEach(el => console.log(el.textContent));
+    //Apple , Banana , Mango
+</script>
+</body>
+</html>

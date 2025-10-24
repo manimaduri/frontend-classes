@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Create & Append Example</title>
+
+  </head>
+  <body>
+    <!-- document.createElement() and document.remove() or  document.removeChild()-->
+
+    <!-- createElement("tagName") will create new element in memory, if we want it to be visible in ui then .append() adds at end,
+.prepend() add at start-->
+
+<!-- <h2>My Favorite fruits</h2>
+
+<ul id="fruitList">
+  <li>Apple</li>
+</ul>
+
+<button id="addFruit">Add Fruit</button>
+
+<script>
+  const list = document.getElementById("fruitList");
+  const button = document.getElementById("addFruit");
+
+  button.addEventListener("click", ()=>{
+    const newFruit = document.createElement("li");
+    newFruit.textContent = "Banana";
+    list.prepend(newFruit);
+  })
+</script> -->
+
+<!-- adding attributes and classes dynamically -->
+ <!-- we can use .setAttribute() .classList.add() or .style -->
+
+ <!-- <div id="container"></div>
+
+ <script>
+  const container = document.getElementById("container");
+
+  const newButton = document.createElement("button");
+  newButton.textContent = "Click Me!";
+  newButton.setAttribute("id", "dynamicBtn");
+  newButton.classList.add("btn","btn-primary");
+  newButton.style.backgroundColor = "lightblue";
+  newButton.style.color="white";
+
+  container.append(newButton);
+
+ </script> -->
+
+ <!-- remove elements remove and removeChild(childNode) -->
+
+ <ul id="tasks">
+  <li>Learn JavaScript</li>
+  <li>Practice DOM</li>
+ </ul>
+
+ <button id="clearTasks">Clear All</button>
+
+
+ <script>
+  const tasks = document.getElementById("tasks");
+  const button = document.getElementById("clearTasks");
+
+  button.addEventListener("click", ()=>{
+    //Remove the all child elements at once 
+    //Method 1
+    // tasks.innerHTML = ""
+
+    //Method 2
+    while (tasks.firstChild){
+      tasks.removeChild(tasks.firstChild);
+    }
+  })
+ </script>
+
+  </body>
+</html>

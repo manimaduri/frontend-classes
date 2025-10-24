@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      .grid-container {
+        display: grid;
+        /* flex-direction: row; */
+        /* flex-wrap: wrap; */
+        grid-template-columns: 250px 1fr; /* aligning items side by side */
+        grid-template-rows: 80px 1fr 60px; /* to control the height */
+        grid-template-areas:
+          "header header"
+          "sidebar main" /* 250px 1fr */
+          "footer footer";
+        gap: 10px;
+        min-height: 100vh;
+        padding: 10px;
+      }
+
+      header {
+        grid-area: header;
+        background-color: #0d6efd;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        font-size: 24px;
+      }
+
+      nav {
+        grid-area: sidebar;
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+      nav ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      nav a {
+        text-decoration: none;
+      }
+      main {
+        grid-area: main;
+        background-color: #ffffff;
+        padding: 20px;
+      }
+      footer {
+        grid-area: footer;
+        background-color: #333;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      /* mobile screens */
+      @media (max-width: 767px) {
+        .grid-container {
+          grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+          grid-template-columns: 1fr;
+          grid-template-rows: 80px auto auto 60px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <header>Hi , I'm Name</header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Projects</a>
+          </li>
+          <li>
+            <a href="#">Skills</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <h2>Welcome to my portfolio</h2>
+        <p>
+          This is a sample layout built using CSS Grid. Its responsive and clean
+        </p>
+      </main>
+      <footer>2025 XYZ. All rights reserved.</footer>
+    </div>
+  </body>
+</html>

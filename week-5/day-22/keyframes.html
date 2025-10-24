@@ -1,0 +1,75 @@
+<!-- animations using css and properties like transition, transform and @keyframes -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+      }
+      @keyframes slideIn {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+        /* from(start of animation) to(end of animation) is nothing but from -0%, and to - 100% */
+      }
+      .slider {
+        padding: 50px;
+        background-color: blue;
+        width: 200px;
+        animation: slideIn 1s ease forwards;
+      }
+
+      @keyframes colorPulse {
+        0% {
+          background-color: red;
+        }
+        25%{
+            background-color: blue;
+        }
+        50% {
+          background-color: yellow;
+        }
+        100% {
+          background-color: red;
+        }
+      }
+
+      .pulse {
+        margin: 50px auto auto auto;
+        animation: colorPulse 10s infinite;
+        padding: 50px;
+        width: 50px;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .spinner {
+        margin: 100px auto auto auto;
+        padding: 50px;
+        width: 50px;
+        background-color: violet;
+        animation: spin 2s linear infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- keyframes -->
+    <div class="slider">Combination of all transform properties</div>
+    <div class="pulse"></div>
+    <div class="spinner"></div>
+  </body>
+</html>

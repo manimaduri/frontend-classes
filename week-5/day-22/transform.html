@@ -1,0 +1,69 @@
+<!-- animations using css and properties like transition, transform and @keyframes -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+      }
+      .flex {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 150px;
+      }
+      .scale-me {
+        transition: transform 0.3s;
+        padding: 50px;
+        background-color: black;
+        color: white;
+        width: 150px;
+      }
+
+      .scale-me:hover {
+        transform: scale(1.2);
+      }
+
+      .rotate-me{
+        padding: 50px;
+        background-color: blue;
+        transition: transform 0.5s ease-in-out;
+      }
+      .rotate-me:hover{
+        transform: rotate(-180deg);
+      }
+      .move-me{
+        padding: 50px;
+        background-color: chocolate;
+        transition: transform 0.4s ease;
+      }
+      .move-me:hover{
+        transform: translateX(-50px);
+      }
+      .combo{
+        padding: 50px;
+        background-color: blue;
+        transition: transform 1s ease-in-out;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .combo:hover{
+        transform: scale(1.2) rotate(15deg) translateY(100px) translateX(150px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- transformation -->
+    <div class="flex">
+      <div class="scale-me">This scales when hovered</div>
+      <div class="rotate-me">This rotates when hovered</div>
+      <div class="move-me">Translate = moving</div>
+    </div>
+    <div class="combo">Combination of all transform properties</div>
+  </body>
+</html>

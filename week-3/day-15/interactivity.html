@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Span Div Button Use</title>
+  <style>
+    .feature {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .feature span {
+      color: blue;
+      font-weight: bold;
+    }
+
+    .feature .hidden-info {
+      display: none;
+      font-size: 14px;
+      color: gray;
+    }
+
+    .feature .more-btn {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Product Feature List</h2>
+
+  <div class="feature">
+    <span>Feature 1:</span> Fast performance
+    <div class="hidden-info">Optimized algorithms and caching techniques.</div>
+    <button class="more-btn" onclick="toggleInfo(this)">Show More</button>
+  </div>
+
+  <div class="feature">
+    <span>Feature 2:</span> Responsive Design
+    <div class="hidden-info">Works across devices including phones and tablets.</div>
+    <button class="more-btn" onclick="toggleInfo(this)">Show More</button>
+  </div>
+
+  <script>
+    function toggleInfo(button) {
+      const infoDiv = button.previousElementSibling;
+      if (infoDiv.style.display === "none" || infoDiv.style.display === "") {
+        infoDiv.style.display = "block";
+        button.textContent = "Show Less";
+      } else {
+        infoDiv.style.display = "none";
+        button.textContent = "Show More";
+      }
+    }
+  </script>
+</body>
+</html>

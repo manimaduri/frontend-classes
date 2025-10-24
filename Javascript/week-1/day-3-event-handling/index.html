@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Event Handling</title>
+    
+  </head>
+  <body>
+    <!-- addEventListener -->
+    <!-- It allows us to listen to multiple events of the same type on the same element and remove them later if needed -->
+
+    <button id="btn">Click Me!</button>
+    <p id="msg"></p>
+
+    <script>
+        const button = document.getElementById("btn");
+        const message = document.getElementById("msg");
+
+        button.addEventListener("click", function(){
+            message.textContent = "Button was clicked!"
+        })
+
+        button.addEventListener("mouseenter", ()=>{
+            message.textContent ="Hovering on button...."
+        })
+    </script>
+  </body>
+</html>

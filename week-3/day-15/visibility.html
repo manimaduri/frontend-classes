@@ -1,0 +1,44 @@
+<!-- Display Properties Deep Dive - visibility  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Properties - visibility</title>
+    <style>
+      .container {
+        background-color: #f0efeb;
+        padding: 15ox;
+        border: 2px dashed #aaa;
+      }
+      .box {
+        background-color: #8ecae6;
+        border: 2px solid #023047;
+        padding: 10px;
+        margin: 10px;
+        color: #fff;
+        font-weight: bold;
+        width: 500px;
+      }
+      .hidden-visiblity{
+        visibility: hidden;
+      }
+
+      .hidden-display{
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Visibility vs Display</h2>
+
+    <div class="box visible">This is a visible box</div>
+    <div class="box hidden-visiblity">
+      This box is hidden with <code>visibility:hidden</code>
+    </div>
+    <div class="box hidden-display">
+      This box is hidden with <code>display:none</code>
+    </div>
+    <div class="box visible">This is another visible box</div>
+  </body>
+</html>

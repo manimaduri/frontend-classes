@@ -1,0 +1,91 @@
+<!-- colors and background units -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Colors Demo</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #f9f9f9;
+        padding: 2rem;
+      }
+      .color-boxes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .box {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        justify-content: center;
+        font-weight: bold;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      .named {
+        background-color: teal;
+      }
+      .hex {
+        background-color: #e91e63;
+      }
+      .rgb {
+        background-color: rgb(33, 150, 243);
+      }
+      .rgba {
+        background-color: rgba(33, 150, 243, 0.5);
+        color: #000;
+      } /* RGB + alpha */
+      .hsl {
+        background-color: hsl(120, 60%, 50%);
+      } /* HSL */
+      .hsla {
+        background-color: hsla(244 43% 52% / 1);
+        color: #000;
+      } /* HSL + alpha */
+      .label {
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 0.5rem;
+      color: #555;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Color formats</h1>
+
+    <div class="color-boxes">
+      <div>
+        <div class="box named">Named</div>
+        <div class="label">Teal</div>
+      </div>
+
+      <div>
+        <div class="box hex">HEX</div>
+        <div class="label">#e91e63</div>
+      </div>
+      <div>
+        <div class="box rgb">RGB</div>
+        <div class="label">rbg(33,150,243)</div>
+      </div>
+
+      <div>
+        <div class="box rgba">RGBA</div>
+        <div class="label">RGBA(33.150.243.0.5)</div>
+      </div>
+      <div>
+        <div class="box hsl">HSL</div>
+        <div class="label">hsl(120,60%,50%)</div>
+      </div>
+
+      <div>
+        <div class="box hsla">HSLA</div>
+        <div class="label">hsla(244 43% 52% / 1)</div>
+      </div>
+    </div>
+  </body>
+</html>

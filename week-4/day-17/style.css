@@ -1,0 +1,54 @@
+.inline-container .box{
+    display: inline-block;
+    width : 100px;
+    height: 100px;
+    background-color: burlywood;
+    margin-right: 10px;
+}
+
+.flex-container{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: bisque;
+    flex-wrap: wrap;
+    padding: 24px;
+}
+
+.item{
+    background-color: blueviolet;
+    color : white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.flex-conteiner2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.layout{
+    display: flex;
+}
+
+.sidebar{
+    flex : 0 0 250px; /* [flex-grow] [flex-shrink] [flex-basis] */
+    background-color: #ddd;
+    padding: 20px;
+}
+
+/* [flex-grow] -> when we want the item to grow , 0 it means even if extra space is there dont grow the item, vice versa for 1*/
+/* [flex-shrink] -> when we want the item to shrink , 0 it means even item will not shrink even if space is not available, vice versa for 1*/
+/* [flex-basis] this is the base size of the item */
+
+.content{
+    /* flex : 1; */
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    background-color: aqua;
+}

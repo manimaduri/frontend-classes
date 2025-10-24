@@ -1,0 +1,86 @@
+<!-- Borders, Outline & Shadows -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Borders, Outline & Shadows</title>
+    <style>
+      .basic-buton {
+        padding: 10px 20px;
+        background-color: white;
+        /* color:white; */
+        border: 2px solid blue; /* width style color */
+        /* border-radius: 10px; */
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+      }
+
+      .no-radius {
+        border-radius: 0;
+      }
+
+      input {
+        padding: 10px;
+        border: none;
+      }
+
+      input:focus {
+        outline: 3px solid orange; /* outline will appear only when focused */
+      }
+
+      .no-outline:focus {
+        outline: none;
+      }
+
+      .border {
+        border-top: 2px;
+        border-style: dashed;
+        border-color: brown;
+        border-bottom: none;
+        border-width: 10px;
+        border-left: none;
+        border-top: none;
+      }
+      .shadow-box:hover {
+        background-color: #e8f5e9;
+        box-shadow: 0 8px 15px rgba(0, 0, 0.2); /* offset-x offset-y blur-radius spread-radius color */
+        transition: box-shadow 0.3s ease;
+      }
+
+      .inset-button {
+        background: #fafafa;
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      .multi-shadow-box {
+        background-color: white;
+        color: #333;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2),
+        -4px -4px 5px rgba(255, 255, 255, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Buttons with Border</h2>
+    <button class="basic-buton no-radius inset-button">
+      Sharp Border Button
+    </button>
+    <button class="basic-buton shadow-box">Rounded Border Button</button>
+    <button class="multi-shadow-box">Multi Shadow Button</button>
+
+    <hr />
+
+    <h2>Outline Form Example</h2>
+
+    <input type="text" class="border" placeholder="Name" />
+    <br />
+    <br />
+    <input type="text" class="no-outline" placeholder="No outline" />
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Validation Example</title>
+    <style>
+      body {
+        font-family: Arial;
+        margin: 20px;
+      }
+
+      input {
+        margin: 8px 0;
+        padding: 8px;
+        display: block;
+        width: 250px;
+      }
+
+      .error {
+        color: red;
+        font-size: 14px;
+      }
+
+      .success {
+        color: green;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Common events are click, input, submit for forms -->
+    <form id="loginForm">
+      <input type="text" id="email" placeholder="Enter email" required />
+      <p id="emailError" class="error"></p>
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter password"
+        required
+      />
+       <p id="passwordError" class="error"></p>
+      <button type="submit">Login</button>
+    </form>
+
+    <p id="formStatus"></p>
+  </body>
+
+  <script>
+    const form = document.getElementById("loginForm");
+    const status = document.getElementById("formStatus");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const emailError = document.getElementById("emailError");
+    const passwordError = document.getElementById("passwordError");
+
+    //Real-time validation
+
+    email.addEventListener("input", (e)=>{
+        if(!email.value.includes("@")){
+            emailError.textContent = "Invalid Email"
+        }else{
+            emailError.textContent = "";
+        }
+    })
+
+    password.addEventListener("input", (e)=>{
+        console.log("password length", password.value.length)
+        if(password.value.length < 6){
+            passwordError.textContent = "Invalid Password should be greater than 6 characters"
+        }else{
+            passwordError.textContent = "";
+        }
+    })
+
+    form.addEventListener("submit", (e)=>{
+        e.preventDefault();
+
+        if(!email.value.includes("@")){
+            emailError.textContent = "Invalid Email"
+            status.textContent = "Invalid Email";
+            status.className = "error"
+        }else if(password.value.length < 6){
+            passwordError.textContent = "Invalid Password should be greater than 6 characters"
+            status.textContent = "Invalid Password";
+            status.className = "error"
+        }else{
+            status.textContent = "Submitted successfully!";
+            status.className = "success"
+        }
+    })
+
+  </script>
+</html>

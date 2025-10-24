@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Text Decoration & Transform</title>
+    <style>
+      :root {
+        font-size: 16px;
+      }
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f0f4f8;
+        color: #222;
+        margin: 0;
+        padding: 2rem;
+        line-height: 1.6;
+      }
+
+      .profile-card {
+        max-width: 600px;
+        margin: auto;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .section-title{
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 1.8rem;
+        color :#333;
+        margin-bottom: 1rem;
+        text-decoration: underline;
+      }
+
+      .username{
+        text-transform: lowercase;
+        font-weight: bold;
+        color:#2c3e50;
+      }
+
+      .bio{
+        font-size: 1.05rem;
+        word-spacing: 5px;
+        color: #555;
+      }
+
+      a.cta-link{
+        text-decoration: none;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+      }
+
+      .cta-link:hover{
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="profile-card">
+      <h2 class="section-title">About me</h2>
+
+      <div class="username">@JohnTheCoder</div>
+
+      <p class="bio">
+        Passionate developer who loves writing clean code, exploring new tools,
+        and sharing knowledge. Always curious and open to collaboration!
+      </p>
+
+      <a href="#" class="cta-link">view my work</a>
+    </div>
+  </body>
+</html>

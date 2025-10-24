@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Event Object</title>
+    
+  </head>
+  <body>
+   <!-- Event Object (target, type) -->
+
+   <!-- <input type="text" id="username" placeholder="Type your name..." />
+
+   <p id="output"></p>
+
+   <script>
+    const input = document.getElementById("username");
+    const output = document.getElementById("output");
+
+    input.addEventListener('input', (e)=>{
+        console.log("Event", e)
+        console.log("Event Type:", e.type)
+        console.log("Event Target Value", e.target.value)
+
+        output.textContent = "You typed: " + e.target.value; 
+    });
+   </script> -->
+
+    <!-- Common events are click, input, submit for forms -->
+   <form id="loginForm">
+    <input type="text" id="email" placeholder="Enter email" required/>
+   <p id="emailError"></p>
+
+    <input type="password" id="password" placeholder="Enter password" required/>
+    <button type="submit">Login</button>
+   </form>
+
+   <p id="status"></p>
+  </body>
+
+  <script>
+    const form = document.getElementById("loginForm");
+    const status = document.getElementById("status");
+
+    //Submit Event
+
+    form.addEventListener("submit", function (event){
+        event.preventDefault(); //prevents page reload
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        if(!email.includes("@")){
+            status.textContent="Invalid Email";
+        } else if(password.length < 6){
+            status.textContent = "Password must be atleast 6 characters"
+        }else{
+            status.textContent = "Form submitted successfully"
+        }
+    })
+  </script>
+</html>

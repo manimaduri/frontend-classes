@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Product Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav">
+      <div class="logo">MyShop</div>
+      <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="banner">
+    <h1>Welcome to Our Store!</h1>
+    <p>Browse our exclusive range of products.</p>
+  </section>
+<section class="featured">
+  <div class="feature-item">
+    <!-- Mobile image (visible on mobile, hidden on desktop) -->
+    <div class="feature-img d-block d-md-none">
+      <img src="https://placehold.co/400x250?text=Fast+Delivery" alt="Fast Delivery">
+    </div>
+    <div class="feature-text">
+      <h2>Why Shop With Us?</h2>
+      <p>
+        We offer the best products at unbeatable prices. Our customer service is top-notch and we guarantee fast delivery.
+      </p>
+    </div>
+    <!-- Desktop image (hidden on mobile, visible on desktop) -->
+    <div class="feature-img d-none d-md-block">
+      <img src="https://placehold.co/400x250?text=Fast+Delivery" alt="Fast Delivery">
+    </div>
+  </div>
+  <div class="feature-item reverse">
+    <div class="feature-text">
+      <h2>Quality Guaranteed</h2>
+      <p>
+        All our products go through strict quality checks. Shop with confidence and enjoy a hassle-free experience.
+      </p>
+    </div>
+    <div class="feature-img">
+      <img src="https://placehold.co/400x250?text=Quality+Check" alt="Quality Check">
+    </div>
+  </div>
+</section>
+  <section class="products">
+    <!-- Product cards -->
+    <div class="product-card">
+      <img src="https://placehold.co/300x200" alt="Product 1">
+      <h3>Product 1</h3>
+      <p>₹999</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://placehold.co/300x200" alt="Product 2">
+      <h3>Product 2</h3>
+      <p>₹1199</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://placehold.co/300x200" alt="Product 3">
+      <h3>Product 3</h3>
+      <p>₹899</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://placehold.co/300x200" alt="Product 4">
+      <h3>Product 4</h3>
+      <p>₹1099</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://placehold.co/300x200" alt="Product 5">
+      <h3>Product 5</h3>
+      <p>₹799</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://placehold.co/300x200" alt="Product 6">
+      <h3>Product 6</h3>
+      <p>₹1299</p>
+      <button>Add to Cart</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MyShop. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

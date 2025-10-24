@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch API Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🌐 Fetch API Demo (Async/Await)</h1>
+
+  <section class="users-section">
+    <h2>👥 All Users</h2>
+    <button id="loadUsers">Load Users</button>
+    <div id="userList" class="user-container"></div>
+  </section>
+
+  <hr>
+
+  <section class="add-user-section">
+    <h2>➕ Add New User</h2>
+    <form id="userForm">
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <button type="submit">Add User</button>
+    </form>
+    <p id="message"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

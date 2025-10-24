@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Manipulation Example</title>
+  <style>
+    #color-box{
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        margin: 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button{
+        display: block;
+        margin: 0 auto;
+        padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+<h1 id="title">Hello DOM!</h1>
+
+<div id="color-box">Box</div>
+
+<button id="change-btn" onclick="handleClick()">Change Color</button>
+
+<script>
+    //Select elements
+    const title = document.getElementById("title");
+    const box = document.getElementById("color-box");
+    const button = document.getElementById("change-btn");
+
+    title.textContent ="Welcome to DOM Manupulation!"
+
+    // button.addEventListener("click",()=>{
+    //     //Pick a random color
+    //     const colors = ["red", "green", "blue", "purple", "orange"];
+    //     const randomColor = colors[Math.floor(Math.random()*colors.length)];
+    //     box.style.backgroundColor = randomColor;
+    // })
+    const handleClick = ()=>{
+        //Pick a random color
+        const colors = ["red", "green", "blue", "purple", "orange"];
+        const randomColor = colors[Math.floor(Math.random()*colors.length)];
+        box.style.backgroundColor = randomColor;
+    }
+  
+</script>
+</body>
+</html>
