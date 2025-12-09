@@ -1,17 +1,78 @@
-import './App.css'
-import Hello from './components/Hello'
+import "./App.css";
+import Button from "./components/Button";
+import Card from "./components/Card";
+import Greeting from "./components/Greeting";
+import Hello from "./components/Hello";
+import Status from "./components/Status";
+import UserCard from "./components/UserCard";
 
 function App() {
+  const loggedIn = true;
 
   return (
-    <div>
-      <h1> React + Typescript setup complete</h1>
-      <Hello name={"78"}></Hello>
-      {/* a welcome component that accepts props title string, subtitle : string, year:number */}
-      {/* <Welcome title="this is react project" subtitle={"using typescript"} year={2026} /> */}
-       </div>
-    
-  )
+    <Card>
+      {loggedIn ? (
+        <div>
+          <h1> React + Typescript setup complete</h1>
+          <Hello name={"78"}></Hello>
+          <UserCard name="John Doe" age={30} />
+          <Greeting name="Alice" country="USA" />
+          <Status status="error" />
+          <Status status="loading" />
+          <Status status="success" />
+
+          <Card shadow={true}>
+            <h2>This is inside Card component</h2>
+            <p>This card has shadow.</p>
+          </Card>
+          <Card>
+            <h2>This is another Card component</h2>
+            <p>This card has no shadow.</p>
+          </Card>
+        </div>
+      ) : (
+        <div>
+          <Button label="Login" />
+          <Button label="Register" variant="secondary" />
+          <Button label="Delete" variant="danger" />
+        </div>
+      )}
+    </Card>
+    //  <Card>
+    //  { loggedIn && (
+    //     <div>
+    //       <h1> React + Typescript setup complete</h1>
+    //       <Hello name={"78"}></Hello>
+    //       <UserCard name="John Doe" age={30} />
+    //       <Greeting name="Alice" country="USA" />
+    //       <Status status="error" />
+    //       <Status status="loading" />
+    //       <Status status="success" />
+
+    //       <Card shadow={true}>
+    //         <h2>This is inside Card component</h2>
+    //         <p>This card has shadow.</p>
+    //       </Card>
+    //       <Card>
+    //         <h2>This is another Card component</h2>
+    //         <p>This card has no shadow.</p>
+    //       </Card>
+    //     </div>
+    //   ) }
+      
+    //   {!loggedIn && (
+    //     <div>
+    //       <Button label="Login" />
+    //       <Button label="Register" variant="secondary" />
+    //       <Button label="Delete" variant="danger" />
+    //     </div>
+    //   )}
+    // </Card>
+  );
 }
 
-export default App
+//todo : Build a reusable alert component, accept props success | error | info, message, {children}
+//[Success] Logged in successfully
+//[Error] Failed to login
+//[Info] Your session will expire in 5 minutes
+export default App;
