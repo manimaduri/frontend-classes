@@ -1,9 +1,13 @@
-import "./App.css";
+import './App.css';
 import Button from "./components/Button";
 import Card from "./components/Card";
 import Greeting from "./components/Greeting";
 import Hello from "./components/Hello";
 import Status from "./components/Status";
+import UserAPI from './components/use-effect/UserAPI';
+import Counter from './components/use-state/Counter';
+import NamesList from './components/use-state/NamesList';
+import Profile from './components/use-state/Profile';
 import UserCard from "./components/UserCard";
 
 function App() {
@@ -14,6 +18,10 @@ function App() {
       {loggedIn ? (
         <div>
           <h1> React + Typescript setup complete</h1>
+          <UserAPI/>
+          <NamesList/>
+          <Profile/>
+          <Counter/>
           <Hello name={"78"}></Hello>
           <UserCard name="John Doe" age={30} />
           <Greeting name="Alice" country="USA" />
