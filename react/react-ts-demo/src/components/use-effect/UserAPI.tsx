@@ -19,6 +19,18 @@ const UserAPI = () => {
       });
   }, []);
 
+  useEffect(()=>{
+    console.log("Runs on every render");
+  });
+
+  useEffect(()=>{
+    console.log("Runs only once");
+  },[]);
+
+  useEffect(()=>{
+    console.log("users list changed", users)
+  },[users,loading])
+
   if (loading) return <p> Loading Users..........</p>;
   return (
     <ul>
