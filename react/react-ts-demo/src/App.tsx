@@ -4,6 +4,7 @@ import Card from "./components/Card";
 import Greeting from "./components/Greeting";
 import Hello from "./components/Hello";
 import Status from "./components/Status";
+import LiveClock from './components/use-effect/LiveClock';
 import UserAPI from './components/use-effect/UserAPI';
 import Counter from './components/use-state/Counter';
 import NamesList from './components/use-state/NamesList';
@@ -12,12 +13,13 @@ import UserCard from "./components/UserCard";
 
 function App() {
   const loggedIn = true;
-
+  const showClock = false;
   return (
     <Card>
       {loggedIn ? (
         <div>
           <h1> React + Typescript setup complete</h1>
+          {showClock && <LiveClock/>}
           <UserAPI/>
           <NamesList/>
           <Profile/>
