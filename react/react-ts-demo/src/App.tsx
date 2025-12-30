@@ -1,6 +1,7 @@
 import './App.css';
 import Button from "./components/Button";
 import Card from "./components/Card";
+import ThemeSwitcher from './components/context/ThemeSwitcher';
 import Greeting from "./components/Greeting";
 import Hello from "./components/Hello";
 import Status from "./components/Status";
@@ -10,15 +11,20 @@ import Counter from './components/use-state/Counter';
 import NamesList from './components/use-state/NamesList';
 import Profile from './components/use-state/Profile';
 import UserCard from "./components/UserCard";
+import ThemeProvider from './context/ThemeProvider';
 
 function App() {
   const loggedIn = true;
   const showClock = false;
   return (
+    <ThemeProvider>
     <Card>
       {loggedIn ? (
         <div>
           <h1> React + Typescript setup complete</h1>
+          <ThemeSwitcher/>
+          <Greeting name="Alice" country="USA" />
+
           {showClock && <LiveClock/>}
           <UserAPI/>
           <NamesList/>
@@ -26,7 +32,6 @@ function App() {
           <Counter/>
           <Hello name={"78"}></Hello>
           <UserCard name="John Doe" age={30} />
-          <Greeting name="Alice" country="USA" />
           <Status status="error" />
           <Status status="loading" />
           <Status status="success" />
@@ -48,6 +53,7 @@ function App() {
         </div>
       )}
     </Card>
+    </ThemeProvider>
     //  <Card>
     //  { loggedIn && (
     //     <div>
