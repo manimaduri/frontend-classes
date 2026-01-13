@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react"
+import ToggleExample from "../custom-hooks";
 
 const UseRefBasics = () => {
     const counteRef = useRef(0);
@@ -16,8 +17,10 @@ const UseRefBasics = () => {
 
   return (
     <>
+
     <input ref={inputRef} placeholder="Type here...."/>
     <button onClick={handleIncrement}>Increment Ref -</button>
+    <ToggleExample/>
     </>
   )
 }

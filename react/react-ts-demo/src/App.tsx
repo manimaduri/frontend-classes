@@ -2,13 +2,13 @@ import './App.css';
 import Button from "./components/Button";
 import Card from "./components/Card";
 import ThemeSwitcher from './components/context/ThemeSwitcher';
+import ToggleExample from './components/custom-hooks';
 import Greeting from "./components/Greeting";
 import Hello from "./components/Hello";
 import Status from "./components/Status";
 import LiveClock from './components/use-effect/LiveClock';
 import UserAPI from './components/use-effect/UserAPI';
 import UseRefBasics from './components/use-ref';
-import ScrollSection from './components/use-ref/ScrollSection';
 import Counter from './components/use-state/Counter';
 import NamesList from './components/use-state/NamesList';
 import Profile from './components/use-state/Profile';
@@ -21,7 +21,8 @@ function App() {
   return (
     <ThemeProvider>
     <Card>
-      <ScrollSection/>
+      {/* <ScrollSection/> */}
+      <ToggleExample/>
       <UseRefBasics/>
       {loggedIn ? (
         <div>
