@@ -7,6 +7,8 @@ import Hello from "./components/Hello";
 import Status from "./components/Status";
 import LiveClock from './components/use-effect/LiveClock';
 import UserAPI from './components/use-effect/UserAPI';
+import UseRefBasics from './components/use-ref';
+import ScrollSection from './components/use-ref/ScrollSection';
 import Counter from './components/use-state/Counter';
 import NamesList from './components/use-state/NamesList';
 import Profile from './components/use-state/Profile';
@@ -19,6 +21,8 @@ function App() {
   return (
     <ThemeProvider>
     <Card>
+      <ScrollSection/>
+      <UseRefBasics/>
       {loggedIn ? (
         <div>
           <h1> React + Typescript setup complete</h1>
