@@ -3,6 +3,10 @@ import Button from "./components/Button";
 import Card from "./components/Card";
 import ThemeSwitcher from './components/context/ThemeSwitcher';
 import ToggleExample from './components/custom-hooks';
+import TypedInput from './components/events';
+import LoginFormBasics from './components/events/LoginFormBasics';
+import LoginFormRHF from './components/events/LoginFormRHF';
+import SignupForm from './components/events/SignupForm';
 import Greeting from "./components/Greeting";
 import Hello from "./components/Hello";
 import Status from "./components/Status";
@@ -21,6 +25,13 @@ function App() {
   return (
     <ThemeProvider>
     <Card>
+      {/* <LoginFormBasics/> */}
+      {/* <LoginFormRHF/> */}
+      <SignupForm/>
+      <br/>
+      <br/>
+      <br/>
+      <TypedInput/>
       {/* <ScrollSection/> */}
       <ToggleExample/>
       <UseRefBasics/>
